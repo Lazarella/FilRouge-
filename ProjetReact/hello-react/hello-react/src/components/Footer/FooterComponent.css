@@ -9,6 +9,7 @@
   }
   
   #footer a {
-    color: white;
+    font-family : 'consolas';
+    color : white;
     text-decoration: underline;
   }
