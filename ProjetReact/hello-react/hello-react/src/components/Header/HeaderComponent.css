@@ -1,0 +1,32 @@
+#background-green {
+  background-color: #c3cbc0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #e6e5e1;
+    height: 100px; /* taille de la banniere */
+}
+
+#logocheval {
+  width: 100px;
+  height: auto;
+  margin-left: auto;
+  margin-right: 20px; /* Ajustement du décalage de l'image */
+}
+
+h2 {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+  text-align: center; /* Ajout de la propriété pour centrer le texte */
+}
+
+#italic {
+  color: white;
+  font-style: italic;
+  margin: 0;
+  text-align: center; /* Ajout de la propriété pour centrer le texte */
+  transform: translateX(30%);
+}
+
