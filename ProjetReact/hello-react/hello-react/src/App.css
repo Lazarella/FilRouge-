@@ -1,41 +1,10 @@
-.App{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  background-color: white;
-  width: 100%;
-  height: 100vh;
-  grid-auto-flow: row; 
+
+.App {
+  text-align: center;
 }
 
-#background-green {
-  background-color: #c3cbc0;
-  color: black;
-  grid-row-start: 1; 
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 7;
-  display: flex; 
-  width: 100%; 
-  height: 80%;
- justify-content: center;
-  align-items: center; 
-  gap: 50px;
-}
 
-#italic{
-  font-style: italic;
-}
 
-#footer{
-  background-color: #c3cbc0;
-  grid-row-start: 6; 
-  grid-row-end: 6;
-  grid-column-start: 1;
-  grid-column-end: 7;
-  display: flex; 
-  width: 100%; 
- justify-content: center;
-  align-items: center; 
-  gap: 50px;
-}
+
+
+

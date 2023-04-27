@@ -1,8 +1,8 @@
 import React from 'react';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import HeaderComponent from './components/HeaderComponent';
-import FooterComponent from './components/FooterComponent';
+import HeaderComponent from './components/Header/HeaderComponent';
+import FooterComponent from './components/Footer/FooterComponent';
 
 function App() {
   return (
