@@ -1,0 +1,11 @@
+#Right{
+    background-color: rgb(98, 241, 162);
+    color: rgb(8, 8, 8);
+    height: 755px;
+}
+
+#Left{
+    background-color: rgb(139, 250, 135);
+    color: red;
+    height: 755px;
+}
