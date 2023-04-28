@@ -13,6 +13,7 @@ import {
   useNavigate,
   Outlet,
 } from 'react-router-dom';
+import NewUser from './views/NewUserView/NewUser';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         
       <Routes>
         <Route path="/" element={<Accueil />} />
+      
         <Route path="/Burger" element={<Burger />} />
       </Routes>
 
