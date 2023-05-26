@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { ListUser } from '../../datas/UserList';
 import NewUser from '../NewUserView/NewUser';
+import Connexion from '../ConnexionView/Connexion';
 
 const Accueil = () => {
 
@@ -17,16 +18,14 @@ const Accueil = () => {
   return (
     <div id="test-accueil">
 
-      <button className='testconnexion'>
-        <Link to="/Burger">connexion</Link>
-      </button>
+      
+        <Link to="/Connexion">connexion</Link>
 
      
       <div>
       <h2>Accueil ♥</h2>
-      <button className='creation-compte'>
         <Link to="/NewUser">creer un compte</Link>
-      </button>
+      
       </div>
 
       <Routes>
