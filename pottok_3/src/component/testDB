@@ -1,0 +1,35 @@
+class testDB extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: []
+    };
+  }
+
+  componentDidMount() {
+    // Effectuer la requête et mettre à jour le state
+    const query = 'SELECT * FROM users';
+    connection.query(query, (error, results) => {
+      if (error) {
+        console.error(error);
+      } else {
+        this.setState({ users: results });
+      }
+    });
+  }
+
+  render() {
+    const { users } = this.state;
+
+    return (
+      <div>
+        {users.map((user) => (
+          <div key={user.id}>
+            <p>Nom: {user.nom}</p>
+            <p>Email: {user.email}</p>
+          </div>
+        ))}
+      </div>
+    );
+  }
+}

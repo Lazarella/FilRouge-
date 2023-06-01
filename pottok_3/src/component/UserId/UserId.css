@@ -1,0 +1,11 @@
+.user{
+    display: inline;
+    float: left;
+    margin-left: 5vw;
+    margin-top : 10%; 
+}
+.imgUser{
+    height: 10vh;
+    width: auto;
+    border-radius: 100px;
+}

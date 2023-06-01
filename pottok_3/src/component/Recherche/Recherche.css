@@ -1,0 +1,15 @@
+.recherche{
+    display :inline; 
+    float : right; 
+    margin-right: 5vw;
+    margin-top : 10%; 
+}
+.loupe{
+  height: 3vw; 
+  width: auto;
+}
+input {
+    border : 1px solid gray; 
+    border-radius: 20px;
+    text-align: center;
+}
