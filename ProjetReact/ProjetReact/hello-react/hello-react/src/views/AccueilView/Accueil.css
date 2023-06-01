@@ -1,0 +1,68 @@
+#test-accueil {
+    display: grid; 
+    grid-template-rows: 4rem auto 45px;
+    grid-template-columns: 16rem auto 1fr 1fr;
+    gap: 3px;
+    height: 100%;
+   
+  }
+  
+  /*A GAUCHE*/
+  .co-container {
+    background-color: #c3cbc0;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+  }
+
+  .co-container a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /*A DROITE*/
+  .create-new {
+    background-color: #c3cbc0;
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: 2;
+    grid-column-end: 5;
+  }
+
+  .create-new a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /*A GAUCHE*/
+  .logo {
+    grid-row-start: 2;
+   grid-column-start: 1;
+   grid-row-end: 3;
+   grid-column-end: 3;
+  
+  }
+
+  #happylogo{
+    margin-left: 10px;
+    height: 500px;
+    width: 600px;
+  }
+
+  .text-container {
+   background-color: #c3cbc0;
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 5;
+  }
+  
+
+  
+  
+  
+  
+  

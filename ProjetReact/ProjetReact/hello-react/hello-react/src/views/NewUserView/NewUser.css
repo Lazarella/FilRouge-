@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .formulaire {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sitename {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  
+
+  .logo {
+ 
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .title {
+    font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+  }
+  
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .btn-success {
+    background-color: #526760;
+    border: none;
+  }
+  
+  .btn-success:hover {
+    background-color: #526760;
+  }
+  
+  .btn-success:focus {
+    box-shadow: none;
+  }
+
+  .loading{
+    font-style: italic;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  .loadingimg{
+    height: 80px;
+    width: 80px;
+  }
