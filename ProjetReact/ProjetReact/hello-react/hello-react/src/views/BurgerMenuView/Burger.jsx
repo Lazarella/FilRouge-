@@ -18,6 +18,7 @@ const BurgerMenu = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [showDeletePopup, setShowDeletePopup] = useState(false);
 const [deletedProjectName, setDeletedProjectName] = useState('');
+const [isDeleting, setIsDeleting] = useState(false);
 
   const navigate = useNavigate();
 
@@ -104,6 +105,7 @@ const [deletedProjectName, setDeletedProjectName] = useState('');
     const updatedProjects = [...projets];
     updatedProjects.splice(index, 1);
     setProjets(updatedProjects);
+    setIsDeleting(true); //last ajout
   };
 
   const openDeletePopup = (projectName) => {
@@ -130,7 +132,7 @@ const [deletedProjectName, setDeletedProjectName] = useState('');
   }
 
   return (
-    <div>
+    <div className='p'>
       <div className="search-bar">
         <button type="submit">Rechercher</button>
         <input type="text" placeholder="Rechercher..." />
@@ -223,10 +225,18 @@ const [deletedProjectName, setDeletedProjectName] = useState('');
 
 {/* POPUP DE SUPPRESSION DE PROJ */}
 {showDeletePopup && (
-  <div className="delete-popup">
-    <p className="deleted-project-name">Le projet "{deletedProjectName}" a été supprimé avec succès.</p>
-    <img src='img/Supp.gif' className='Projsupp'/>
-    <button onClick={closeDeletePopup} className='button-popup'>Fermer</button>
+    <div className="delete-popup">
+    <p className="deleted-project-name">
+      Le projet "{deletedProjectName}" a été supprimé avec succès.
+    </p>
+    <img
+      src="img/Supp.gif"
+      className={`Projsupp ${isDeleting ? 'shake-animation' : ''}`}
+      alt="Supp"
+    />
+    <button onClick={closeDeletePopup} className="button-popup">
+      Fermer
+    </button>
   </div>
 )}
 {/* FIN POPUP DE SUPPRESSION DE PROJ */}
