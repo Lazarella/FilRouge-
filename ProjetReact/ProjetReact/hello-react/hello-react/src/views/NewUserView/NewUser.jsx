@@ -6,6 +6,7 @@ const NewUser = ({ users, setUsers }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const [typedText, setTypedText] = useState('');
+  const [isJumping, setIsJumping] = useState(false);
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -36,7 +37,32 @@ const NewUser = ({ users, setUsers }) => {
     setIsLoading(true); // Activer la page de chargement
   };
 
+
+ // SAUTER 
+
+ useEffect(() => {
+  function handleKeyDown(event) {
+    if (event.code === 'Space' && !isJumping) {
+      setIsJumping(true);
+      setTimeout(() => {
+        setIsJumping(false);
+      }, 300); // Temps avant de réinitialiser la classe CSS (300 millisecondes)
+    }
+  }
+
+  document.addEventListener('keydown', handleKeyDown);
+
+  return () => {
+    document.removeEventListener('keydown', handleKeyDown);
+  };
+}, [isLoading, navigate, isJumping]);
+
+
+
+
 //FIN DE PAGE DE CHARGEMENT
+
+
   function resetState() {
     setPhoto(null);
     setNom('');
@@ -59,11 +85,12 @@ const NewUser = ({ users, setUsers }) => {
   return (
     <div className="container">
        {isLoading ? (
-        <div className="loading">
+        <div className={`loading ${isJumping ? 'jump' : ''}`}>
           <div>
-            <img src="img/loadgif.gif" className="loadingimg" alt="Loading" />
+             <img src="img/loadgif.gif" className={`loadingimg ${isJumping ? 'jumping' : ''}`} alt="Loading" />
           </div>
           <div className="typing-effect">{typedText}</div>
+             
         </div>
       ) : (
         <div className="card formulaire">
